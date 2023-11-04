@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #020202;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.container{
+    width: 35vw;
+    margin: auto;
+    /* border: 2px solid white; */
+}
+
+
+.calculator_container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap:2px 2px;
+}
+
+.calculator_container button{
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    
+}
+
+.calculator_container button:active{
+    background-color: #cccccc;
+}
+
+
+
+#C,#AC,#percent,#multiply,#devide,#plus,#minus{
+    color: #d13e04;
+}
+
+#equal{
+    background-color: #d13e04;
+    color: white;
+    
+}
