@@ -17,13 +17,16 @@ function input(value){
         // entering the input in the input field of id display using buttons of the calculator
         document.getElementById("display").value +=value;
     }
+    // erasing all input a time
     else if(value=='AC'){
         document.getElementById("display").value='';
     }
-    // below code is not working
+    // below code is erasing one character at a time from right side
     else if(value=='C'){
-       let txt= document.getElementById("display").value;
-       let temp=txt.substr(txt.length-1,1);
+      let txt=document.getElementById("display").value;
+      let data= txt[txt.length-1];
+      document.getElementById("display").value= txt.replace(data,'');
+    
     }
 }
 
