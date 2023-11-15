@@ -1,84 +1,73 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #020202;
 }
 
-h1{
+h1 {
     text-align: center;
     color: white;
 }
 
-/* The whole calculator including input field  */
-.container{
-    width: 35vw;
+.container {
+    width: 50vw;
     margin: auto;
 }
 
-.input_container{
+.input_container {
+    margin: auto;
+    width: 100%; /* Adjusted to take full width */
+}
+
+#display {
     width: 100%;
-   
-}
-
-
-/* input field where we enter number for calculation */
-#display{
-    width:100%;
     margin: auto;
+    height: 30px;
 }
 
-/* the container includes all buttons */
-.calculator_container{
+.calculator_container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap:2px 2px;
+    grid-template-columns: repeat(4, 1fr); /* Improved grid definition */
+    gap: 2px;
 }
 
-/* Each button of the calculator */
-.calculator_container button{
+.calculator_container button {
     font-size: 30px;
     padding: 20px;
     cursor: pointer;
-    
 }
 
-/* when we click the button of the calculator */
-.calculator_container button:active{
+.calculator_container button:active {
     background-color: #cccccc;
 }
 
-
-/* setting the font color of the following buttons */
-#C,#AC,#percent,#multiply,#devide,#plus,#minus{
+#C,
+#AC,
+#percent,
+#multiply,
+#devide,
+#plus,
+#minus {
     color: #d13e04;
 }
 
-/* setting the background color and font color of equal button */
-#equal{
+#equal {
     background-color: #d13e04;
     color: white;
-    
 }
 
-
- /* Setting the responsiveness of the app. */
-@media(max-width:600px){
-  
-    .container{
-        width: 35vw;
-        margin: auto;
+/* Improved media query for better responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90vw; /* Adjusted for better mobile view */
     }
-   
-    .calculator_container button{
+
+    .calculator_container button {
         font-size: 15px;
         padding: 10px;
-        cursor: pointer;
-        
     }
-
- 
-} 
+}
